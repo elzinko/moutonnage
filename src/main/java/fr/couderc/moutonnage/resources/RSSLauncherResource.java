@@ -21,13 +21,13 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.couderc.moutonnage.services.RSSReaderServiceImpl;
 
 @RestController
-@RequestMapping("/update")
-class BookmarkRestController {
+@RequestMapping("/rss-update")
+class RSSUpdateResource {
 
     private final RSSReaderServiceImpl rssReaderService;
 
     @Autowired
-    BookmarkRestController(RSSReaderServiceImpl rssReaderService) {
+    RSSUpdateResource(RSSReaderServiceImpl rssReaderService) {
         this.rssReaderService = rssReaderService;
     }
 
