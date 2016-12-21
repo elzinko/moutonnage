@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.couderc.moutonnage.services.RSSReaderServiceImpl;
 
 @RestController
-@RequestMapping("/rss")
+@RequestMapping("/update")
 class BookmarkRestController {
 
     private final RSSReaderServiceImpl rssReaderService;
@@ -31,7 +31,7 @@ class BookmarkRestController {
         this.rssReaderService = rssReaderService;
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/update")
+    @RequestMapping(method = RequestMethod.GET)
     ResponseEntity<?> updateRSS() {
         this.rssReaderService.readRSS();
         return ResponseEntity.noContent().build();
